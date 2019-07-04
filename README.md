@@ -134,17 +134,23 @@ Pimpl::~Pimpl() noexcept
 
 auto Pimpl::operator = (Pimpl const& other) -> Pimpl&
 {
-	delete self;
-	       self = new Self { *other.self };
+	if(this != &other)
+	{
+		delete self;
+		       self = new Self { *other.self };
+	}
 
 	return *this;
 }
 
 auto Pimpl::operator = (Pimpl&& other) noexcept -> Pimpl&
 {
-	delete self;
-	       self = other.self;
-	              other.self = nullptr;
+	if(this != &other)
+	{
+		delete self;
+		       self = other.self;
+		              other.self = nullptr;
+	}
 
 	return *this;
 }
