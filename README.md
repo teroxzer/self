@@ -136,8 +136,10 @@ auto Pimpl::operator = (Pimpl const& other) -> Pimpl&
 {
 	if(this != &other)
 	{
+		auto newSelf = new Self { *other.self };
+
 		delete self;
-		       self = new Self { *other.self };
+		       self = newSelf;
 	}
 
 	return *this;
