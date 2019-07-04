@@ -1,5 +1,5 @@
 # self
-##Tractatus logico-selfidiomicus a.k.a C++ self idiom
+## Tractatus logico-selfidiomicus a.k.a C++ self idiom
 Whereof one cannot this, thereof one must be self.
 ```
 /////////////////////////////////////////////////////////////////////////////
